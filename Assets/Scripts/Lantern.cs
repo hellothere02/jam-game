@@ -7,7 +7,7 @@ public class Lantern : MonoBehaviour
     [SerializeField] private float minOffset;
     [SerializeField] private float maxOffset;
     [SerializeField] private int number;
-
+    
     private void Update()
     {
         Vector3 diference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
