@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
     //[SerializeField] GameObject deadPanel;
     private Vector2 currentSwordTransform;
     private SpriteRenderer spriteRenderer;
-    private SpriteRenderer spriteRendererHead;
-    private Transform transformHead;
     [SerializeField] private GameObject headRight;
     [SerializeField] private GameObject headleft;
     private Vector3 overlapCircle;
