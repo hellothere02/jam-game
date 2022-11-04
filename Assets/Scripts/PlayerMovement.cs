@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool inAttack;
     private bool isAllowedToJump;
     private bool isNotInAir;
-    private float angle = 0;
+    //private float angle = 0;
 
 
     //public static PlayerMovement playerMovement;
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
                 //spriteRendererLight.flipX = true;
                 //transformHead.localPosition = new Vector3(-0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
                 //currentSwordTransform = new Vector2(swordLeftTransform.position.x, swordLeftTransform.position.y);
-                angle = 180f;
+                //angle = 180f;
             }
             else
             {
@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
                 //spriteRendererLight.flipX = false;
                 //transformHead.localPosition = new Vector3(0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
                 //currentSwordTransform = new Vector2(swordRightTransform.position.x, swordRightTransform.position.y);
-                angle = 0;
+                //angle = 0;
             }
         }
     }

@@ -55,3 +55,6 @@ TagManager:
   - name: UI
     uniqueID: 3145578761
     locked: 0
+  - name: Trap
+    uniqueID: 3290731623
+    locked: 0
