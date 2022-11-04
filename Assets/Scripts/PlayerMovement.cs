@@ -19,20 +19,29 @@ public class PlayerMovement : MonoBehaviour
     //[SerializeField] GameObject deadPanel;
     private Vector2 currentSwordTransform;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject headRight;
+    [SerializeField] private GameObject headleft;
     private Vector3 overlapCircle;
     private Rigidbody2D playerRigidbody;
-    //private Animator animator;
+    private Animator animator;
     private bool inAttack;
     private bool isAllowedToJump;
     private bool isNotInAir;
     private float angle = 0;
 
+
+    //public static PlayerMovement playerMovement;
+
+
     private void Awake()
     {
+        headRight.SetActive(true);
+        //playerMovement = this;
         playerRigidbody = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        //spriteRendererHead = GameObject.Find("HeadEX_0").GetComponent<SpriteRenderer>();
+        //transformHead = GameObject.Find("HeadEX_0").GetComponent<Transform>();
     }
 
     private void FixedUpdate()
@@ -46,11 +55,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isNotInAir && isMoving)
         {
-            //animator.SetFloat("Velocity", Mathf.Abs(playerRigidbody.velocity.x));
+            animator.SetFloat("Velocity", Mathf.Abs(playerRigidbody.velocity.x));
         }
         else
         {
-            //animator.SetFloat("Velocity", 0);
+            animator.SetFloat("Velocity", 0);
         }
     }
 
@@ -128,12 +137,23 @@ public class PlayerMovement : MonoBehaviour
             if (horizontalDirection < 0)
             {
                 spriteRenderer.flipX = true;
+                headRight.SetActive(false);
+                headleft.SetActive(true);
+                
+                //spriteRendererHead.flipX = true;
+                //spriteRendererLight.flipX = true;
+                //transformHead.localPosition = new Vector3(-0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
                 //currentSwordTransform = new Vector2(swordLeftTransform.position.x, swordLeftTransform.position.y);
                 angle = 180f;
             }
             else
             {
                 spriteRenderer.flipX = false;
+                headleft.SetActive(false);
+                headRight.SetActive(true);
+                //spriteRendererHead.flipX = false;
+                //spriteRendererLight.flipX = false;
+                //transformHead.localPosition = new Vector3(0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
                 //currentSwordTransform = new Vector2(swordRightTransform.position.x, swordRightTransform.position.y);
                 angle = 0;
             }
