@@ -19,6 +19,10 @@ public class PlayerDeath : MonoBehaviour
 
     public static event OnDeatPlayer Death;
     public delegate void OnDeatPlayer(bool death);
+
+    private bool _isdeath = false;
+    public static event OnDeath SoundDeath;
+    public delegate void OnDeath(bool death);
     void OnEnable()
     {
         ManagenetUIGame.ProceedGame += CheckPoint;
@@ -39,20 +43,25 @@ public class PlayerDeath : MonoBehaviour
     private void DeathPlayer()
     {
         hit = Physics2D.Raycast(_rbPlayer.transform.position, Vector2.down, _distance, _goal);
-        
+    
         if (hit.collider != null)
         {
+            Debug.Log(hit.collider.CompareTag("Ground"));
+
             if (hit.collider.CompareTag("Ground"))
                 _checkPointposition = _rbPlayer.transform.position;
             _isDeat = false;
-        }
-       
-        if (_rbPlayer.transform.position.y < -3)
-        {
-            _isDeat = true;
-            Death(_isDeat);
-        }
+            
+        } 
 
+            if (_rbPlayer.transform.position.y < 0.35)
+            {
+                _isDeat = true;
+                Death(_isDeat);
+                 _isdeath = true;
+                 Death(_isdeath);
+            }
+   
     }
     private void CheckPoint(bool ischeckPoint)
     {

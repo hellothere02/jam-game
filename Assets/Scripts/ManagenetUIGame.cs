@@ -9,6 +9,11 @@ public class ManagenetUIGame : MonoBehaviour
     public static event OnProceed ProceedGame;
     public delegate void OnProceed(bool proceedGame);
 
+    private bool _isclick = false;
+    public static event OnClick Click;
+    public delegate void OnClick(bool click);
+
+   
     void OnEnable()
     {
         PlayerDeath.Death += ActivScreenOfDeath;
@@ -21,12 +26,14 @@ public class ManagenetUIGame : MonoBehaviour
     {
         if (activ)
             _screenOfDeath.gameObject.SetActive(true);
-            _ispocced = false;
+        _ispocced = false;
     }
 
     public void OnMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        _isclick = true;
+        Click(_isclick);
     }
 
     public void OnProceedGame()
@@ -34,5 +41,7 @@ public class ManagenetUIGame : MonoBehaviour
         _screenOfDeath.gameObject.SetActive(false);
         _ispocced = true;
         ProceedGame(_ispocced);
+        _isclick = true;
+        Click(_isclick);
     }
 }
