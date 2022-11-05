@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprite/newnew_Harvey/001 JumpH.png.meta
 guid: 225c9e8a4645c5e43abd54ca06900f80
+========
+guid: 8fe2ea4bd4b751c4b9980d40cb520388
+>>>>>>>> aaeef183ca69020c3dac1cc687215c180a4c7976:Assets/Sprite/Ground_old/pop.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
