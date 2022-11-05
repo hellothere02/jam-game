@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private float horizontalDirection;
-    private bool isAttacking;
+    //private bool isAttacking;
     private bool isJumped;
     private bool isMoving;
 
@@ -20,9 +20,9 @@ public class PlayerInput : MonoBehaviour
         horizontalDirection = Input.GetAxis(GlobalStringVars.HorizontalAxis);
         isMoving = Input.GetButton(GlobalStringVars.HorizontalAxis);
         isJumped = Input.GetButtonDown(GlobalStringVars.JumpButton);
-        isAttacking = Input.GetButtonDown(GlobalStringVars.FireButton);
+        //isAttacking = Input.GetButtonDown(GlobalStringVars.FireButton);
         playerMovement.MovePlayer(horizontalDirection, isJumped, isMoving);
-        playerMovement.Attack(isAttacking);
+        //playerMovement.Attack(isAttacking);
     }
 }
 
