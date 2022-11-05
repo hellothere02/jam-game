@@ -377,10 +377,10 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 0
-  _distance: 0
+  _distance: 0.1
   _goal:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!1 &4760934891040322932
 GameObject:
   m_ObjectHideFlags: 0
