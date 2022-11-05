@@ -27,21 +27,16 @@ public class PlayerMovement : MonoBehaviour
     private bool inAttack;
     private bool isAllowedToJump;
     private bool isNotInAir;
-    //private float angle = 0;
 
 
-    //public static PlayerMovement playerMovement;
 
 
     private void Awake()
     {
         headRight.SetActive(true);
-        //playerMovement = this;
         playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //spriteRendererHead = GameObject.Find("HeadEX_0").GetComponent<SpriteRenderer>();
-        //transformHead = GameObject.Find("HeadEX_0").GetComponent<Transform>();
     }
 
     private void FixedUpdate()
@@ -63,19 +58,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Attack(bool isAttacking)
-    {
-        if (isAttacking && isNotInAir)
-        {
-            //GameObject currentSword = Instantiate(sword, currentSwordTransform, Quaternion.Euler(0, 0, angle));
-            //animator.SetBool("isAttacking", true);
-            inAttack = true;
-        }
-        else
-        {
-            //animator.SetBool("isAttacking", false);
-        }
-    }
+    //public void Attack(bool isAttacking)
+    //{
+    //    if (isAttacking && isNotInAir)
+    //    {
+    //        //GameObject currentSword = Instantiate(sword, currentSwordTransform, Quaternion.Euler(0, 0, angle));
+    //        //animator.SetBool("isAttacking", true);
+    //        inAttack = true;
+    //    }
+    //    else
+    //    {
+    //        //animator.SetBool("isAttacking", false);
+    //    }
+    //}
 
     public void MovePlayer(float direction, bool isJumped, bool isMoving)
     {
@@ -98,21 +93,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerRigidbody.velocity.y.Equals(0) == false && isJumped)
         {
-            //animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
         else
         {
-            //animator.SetBool("isJumping", false);
+            animator.SetBool("isJumping", false);
         }
 
         if (isNotInAir == false)
         {
-            //animator.SetBool("inAir", true);
-            //animator.SetBool("isJumping", false);
+            animator.SetBool("inAir", true);
+            animator.SetBool("isJumping", false);
         }
         else
         {
-            //animator.SetBool("inAir", false);
+            animator.SetBool("inAir", false);
         }
     }
 
