@@ -8,7 +8,6 @@ public class SecretItem : MonoBehaviour
 {
     [SerializeField] private GameObject helpPanel;
     [SerializeField] private GameObject textPanel;
-    //[SerializeField] GameObject 
     [SerializeField] private TextMeshProUGUI currentText;
     [SerializeField] private string[] monolog;
     private int currentIndexText;

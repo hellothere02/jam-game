@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Sprite/newnew_Harvey/001 JumpH.png.meta
-guid: 225c9e8a4645c5e43abd54ca06900f80
-========
-guid: 8fe2ea4bd4b751c4b9980d40cb520388
->>>>>>>> aaeef183ca69020c3dac1cc687215c180a4c7976:Assets/Sprite/Ground_old/pop.png.meta
+guid: 727b80d105fa65d4997ae601521fd187
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -74,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
