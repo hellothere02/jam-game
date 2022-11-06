@@ -42673,11 +42673,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201C\u0427\u0442\u043E \u0436\u0435 \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C
-    \u0441 \u0417\u0435\u0444\u0438\u0440\u043A\u043E\u0439?\u201D"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5670f66989fb83f46a1f0e2beec03d70, type: 2}
+  m_sharedMaterial: {fileID: 1013196400656915530, guid: 5670f66989fb83f46a1f0e2beec03d70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42827,10 +42826,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201C\u0427\u0442\u043E \u0436\u0435 \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C
-    \u0441 \u0417\u0435\u0444\u0438\u0440\u043A\u043E\u0439?\u201D"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5670f66989fb83f46a1f0e2beec03d70, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -42894,7 +42892,7 @@ MonoBehaviour:
   m_margin: {x: 117.8703, y: 319.27145, z: 96.4375, w: -16.073242}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &3583121716547736588
@@ -43453,8 +43451,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5670f66989fb83f46a1f0e2beec03d70, type: 2}
+  m_sharedMaterial: {fileID: 1013196400656915530, guid: 5670f66989fb83f46a1f0e2beec03d70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -43818,7 +43816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3583121717624425262
 CanvasRenderer:
   m_ObjectHideFlags: 0
