@@ -8,6 +8,7 @@ public class ManagenetUIGame : MonoBehaviour
     [SerializeField] private Image _ecpMenu;
     [SerializeField] private Slider _slider;
     [SerializeField] private AudioSource _audio;
+    [SerializeField] private PlayerDeath _gm;
     private bool _ispocced;
     public static event OnProceed ProceedGame;
     public delegate void OnProceed(bool proceedGame);

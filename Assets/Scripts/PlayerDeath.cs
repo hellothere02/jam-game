@@ -18,7 +18,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private AudioSource _sounDeathPlayer;
 
 
-    private bool _isDeat;
+    public bool _isDeat;
 
     public static event OnDeatPlayer Death;
     public delegate void OnDeatPlayer(bool death);

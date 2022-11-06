@@ -10,9 +10,15 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private GameObject textPanel;
     [SerializeField] private TextMeshProUGUI currentText;
     [SerializeField] private string[] monolog;
+    [SerializeField] private AudioSource _World;
+    [SerializeField] private AudioSource _mysourse;
+    [SerializeField] private Slider _slider;
     private int currentIndexText;
     private bool isAllow;
-
+    private void Awake()
+    {
+        _mysourse = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.F) && isAllow)
@@ -26,6 +32,8 @@ public class SecretItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         helpPanel.SetActive(true);
+        _mysourse.Play();
+        _World.Stop();
         isAllow = true;
 
     }
@@ -51,6 +59,8 @@ public class SecretItem : MonoBehaviour
     public void ClosePopUp()
     {
         textPanel.SetActive(false);
+        _mysourse.Stop();
+        _World.Play();
         Destroy(gameObject);
     }
 }

@@ -10,6 +10,7 @@ public class SoundGame : MonoBehaviour
     [SerializeField] private AudioSource _sounJumpPlayer;
     [SerializeField] private AudioSource _sounAlightingdPlayer;
     [SerializeField] private AudioSource _sounPlantWorld;
+ 
 
     void OnEnable()
     {
@@ -20,6 +21,7 @@ public class SoundGame : MonoBehaviour
         PlayerMovement.JumpSound += SoundJumpPlayer;
         PlayerMovement.Alightingd += SoundAlightingdPlayer;
         WildPlant.DeathWild += SoundPlantWorld;
+ 
     }
     void OnDisable()
     {
@@ -30,6 +32,7 @@ public class SoundGame : MonoBehaviour
         PlayerMovement.JumpSound -= SoundJumpPlayer;
         PlayerMovement.Alightingd -= SoundAlightingdPlayer;
         WildPlant.DeathWild -= SoundPlantWorld;
+   
     }
 
     private void SoundCliclPlay(bool activ)
@@ -74,4 +77,6 @@ public class SoundGame : MonoBehaviour
             _sounPlantWorld.Play();
         }
     }
+
+   
 }
