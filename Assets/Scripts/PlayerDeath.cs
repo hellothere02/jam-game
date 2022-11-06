@@ -13,6 +13,8 @@ public class PlayerDeath : MonoBehaviour
     private float _distance;
     [SerializeField]
     private LayerMask _goal;
+    [SerializeField]
+    private Animator _trapAnim;
    
 
     private bool _isDeat;
@@ -26,18 +28,21 @@ public class PlayerDeath : MonoBehaviour
     void OnEnable()
     {
         ManagenetUIGame.ProceedGame += CheckPoint;
+        WildPlant.DeathWild += DeathPlayerTrap;
     }
     void OnDisable()
     {
         ManagenetUIGame.ProceedGame -= CheckPoint;
+        WildPlant.DeathWild -= DeathPlayerTrap;
     }
     private void Awake()
     {
         _rbPlayer = GetComponent<Rigidbody2D>();
+        _trapAnim = GetComponent<Animator>();
     }
     private void Update()
     {
-         DeathPlayer();
+        DeathPlayer();
     }
 
     private void DeathPlayer()
@@ -46,7 +51,6 @@ public class PlayerDeath : MonoBehaviour
     
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.CompareTag("Ground"));
 
             if (hit.collider.CompareTag("Ground"))
                 _checkPointposition = _rbPlayer.transform.position;
@@ -69,8 +73,24 @@ public class PlayerDeath : MonoBehaviour
             _rbPlayer.transform.position =_checkPointposition;
         _rbPlayer.velocity = Vector3.zero;
     }
+    
 
-
-
-
+    private void  DeathPlayerTrap(bool activ)
+    {
+        if (activ)
+        {
+            StartCoroutine("DeathTrap");
+        }
+    
+    }
+    private IEnumerator DeathTrap()
+    {       
+            float anim = _trapAnim.GetCurrentAnimatorStateInfo(0).length;
+            yield return new WaitForSeconds(anim + 0.5f);
+            _isDeat = true;
+            Death(_isDeat);       
+    }
 }
+
+    
+
