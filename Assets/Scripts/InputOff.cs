@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputOff : MonoBehaviour
 {
     [SerializeField] private GameObject sherli;
+    [SerializeField] private GameObject destroedGO;
     private GameObject player;
 
     
@@ -20,6 +21,6 @@ public class InputOff : MonoBehaviour
     public void ReduceInput()
     {
         player.GetComponentInParent<PlayerInput>().enabled = true;
-        Destroy(gameObject);
+        Destroy(destroedGO);
     }
 }

@@ -29,11 +29,13 @@ public class PlayerDeath : MonoBehaviour
     {
         ManagenetUIGame.ProceedGame += CheckPoint;
         WildPlant.DeathWild += DeathPlayerTrap;
+        TrapDog.DeathDog += DeathPlayerTrap;
     }
     void OnDisable()
     {
         ManagenetUIGame.ProceedGame -= CheckPoint;
         WildPlant.DeathWild -= DeathPlayerTrap;
+        TrapDog.DeathDog -= DeathPlayerTrap;
     }
     private void Awake()
     {
