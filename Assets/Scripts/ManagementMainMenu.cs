@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class ManagementMainMenu : MonoBehaviour
@@ -7,6 +8,7 @@ public class ManagementMainMenu : MonoBehaviour
     private bool _isclick = false;
     public static event OnClick Click;
     public delegate void OnClick(bool click);
+    [SerializeField] private Image _raz;
 
     public void StarGame()
     {
@@ -20,5 +22,16 @@ public class ManagementMainMenu : MonoBehaviour
         Application.Quit();
         _isclick = true;
         Click(_isclick);
-    }   
+    }
+    public void RazInfo()
+    {
+        _raz.gameObject.SetActive(true);
+        Click(_isclick);
+    }
+
+    public void StartMenu()
+    {
+        _raz.gameObject.SetActive(false);
+        Click(_isclick);
+    }
 }

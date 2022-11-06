@@ -28,7 +28,17 @@ public class PlayerMovement : MonoBehaviour
     private bool isAllowedToJump;
     private bool isNotInAir;
 
+    private bool _isStep = false;
+    public static event OnStep Step;
+    public delegate void OnStep(bool step);
 
+    private bool _isJumpSound = false;
+    public static event OnJump JumpSound;
+    public delegate void OnJump(bool jump);
+
+    private bool _isAlightingd = false;
+    public static event OnAlightingd Alightingd;
+    public delegate void OnAlightingd(bool alightingd);
 
 
     private void Awake()
@@ -37,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
+    private void Start()
+    {
+        Step(_isStep);
     }
 
     private void FixedUpdate()
@@ -51,10 +66,14 @@ public class PlayerMovement : MonoBehaviour
         if (isNotInAir && isMoving)
         {
             animator.SetFloat("Velocity", Mathf.Abs(playerRigidbody.velocity.x));
+            _isStep = false;
+            Step(_isStep);
         }
         else
         {
             animator.SetFloat("Velocity", 0);
+            _isStep=true;
+            Step(_isStep);
         }
     }
 
@@ -94,6 +113,9 @@ public class PlayerMovement : MonoBehaviour
         if (playerRigidbody.velocity.y.Equals(0) == false && isJumped)
         {
             animator.SetBool("isJumping", true);
+            _isJumpSound = true;
+            JumpSound(_isJumpSound);
+
         }
         else
         {
@@ -104,6 +126,8 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("inAir", true);
             animator.SetBool("isJumping", false);
+            _isAlightingd = true;
+            Alightingd(_isAlightingd);
         }
         else
         {

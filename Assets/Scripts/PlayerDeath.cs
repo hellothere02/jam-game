@@ -15,16 +15,17 @@ public class PlayerDeath : MonoBehaviour
     private LayerMask _goal;
     [SerializeField]
     private Animator _trapAnim;
-   
+    [SerializeField] private AudioSource _sounDeathPlayer;
+
 
     private bool _isDeat;
 
     public static event OnDeatPlayer Death;
     public delegate void OnDeatPlayer(bool death);
 
-    private bool _isdeath = false;
-    public static event OnDeath SoundDeath;
-    public delegate void OnDeath(bool death);
+    //private bool _isdeath = false;
+    //public static event OnDeath SoundDeath;
+    //public delegate void OnDeath(bool death);
     void OnEnable()
     {
         ManagenetUIGame.ProceedGame += CheckPoint;
@@ -62,10 +63,12 @@ public class PlayerDeath : MonoBehaviour
 
             if (_rbPlayer.transform.position.y < 0.35)
             {
+                   _sounDeathPlayer.Play();
                 _isDeat = true;
+                //Death(_isDeat);
+
+              //SoundDeath(_isDeat);
                 Death(_isDeat);
-                 _isdeath = true;
-                 Death(_isdeath);
             }
    
     }
