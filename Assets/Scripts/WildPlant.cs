@@ -9,6 +9,7 @@ public class WildPlant : MonoBehaviour
     public static event OnDeathWild DeathWild;
     public delegate void OnDeathWild(bool death);
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         anim.SetBool("Clap", true);
