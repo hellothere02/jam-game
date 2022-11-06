@@ -10,6 +10,7 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private GameObject textPanel;
     [SerializeField] private TextMeshProUGUI currentText;
     [SerializeField] private string[] monolog;
+    [SerializeField] private ManagenetUIGame managenetUI;
     private int currentIndexText;
     private bool isAllow;
 
@@ -17,6 +18,7 @@ public class SecretItem : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) && isAllow)
         {
+            managenetUI.GetScore();
             helpPanel.SetActive(false);
             textPanel.SetActive(true);
             currentText.text = monolog[currentIndexText];
@@ -27,7 +29,6 @@ public class SecretItem : MonoBehaviour
     {
         helpPanel.SetActive(true);
         isAllow = true;
-
     }
 
     public void NextMessege()

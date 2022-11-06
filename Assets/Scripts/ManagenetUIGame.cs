@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ManagenetUIGame : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ManagenetUIGame : MonoBehaviour
     [SerializeField] private Image _ecpMenu;
     [SerializeField] private Slider _slider;
     [SerializeField] private AudioSource _audio;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    private int score;
     private bool _ispocced;
     public static event OnProceed ProceedGame;
     public delegate void OnProceed(bool proceedGame);
@@ -67,5 +70,11 @@ public class ManagenetUIGame : MonoBehaviour
             _ecpMenu.gameObject.SetActive(false);
            _isEsp = false;
         }
+    }
+
+    public void GetScore()
+    {
+        score++;
+        scoreText.text = score.ToString();
     }
 }

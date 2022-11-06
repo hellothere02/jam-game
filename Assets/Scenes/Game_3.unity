@@ -10973,6 +10973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4039664121195848258, guid: 563633af8bfdb2b459b25e7da0145bfa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4039664121210880785, guid: 563633af8bfdb2b459b25e7da0145bfa, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
@@ -11087,6 +11091,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563633af8bfdb2b459b25e7da0145bfa, type: 3}
+--- !u!114 &552159922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4039664121210880796, guid: 563633af8bfdb2b459b25e7da0145bfa, type: 3}
+  m_PrefabInstance: {fileID: 552159921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcaf28cc052734143a6433477f23051c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &555438335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13816,6 +13831,7 @@ MonoBehaviour:
     \u0447\u0442\u043E \u043F\u0440\u0435\u0441\u043B\u0435\u0434\u0443\u0435\u0442
     \u0435\u0451 \u0432 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0439
     \u043F\u043E\u0433\u043E\u043D\u0435.\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!61 &581869227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14757,6 +14773,7 @@ MonoBehaviour:
   - "\u201C\u0412\u0441\u0435\u043C \u0431\u044B\u043B\u043E \u043F\u043B\u0435\u0432\u0430\u0442\u044C,
     \u0431\u0435\u0434\u043D\u0430\u044F \u0434\u0435\u0432\u043E\u0447\u043A\u0430,
     \u043A\u0430\u043A \u0436\u0435 \u0442\u044B \u043E\u0434\u0438\u043D\u043E\u043A\u0430.\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!61 &627968876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40286,6 +40303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592274882}
   - component: {fileID: 1592274883}
+  - component: {fileID: 1592274884}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -40332,8 +40350,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 1}
+  m_Size: {x: 0.05, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1592274884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592274881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cdb455baafb4d4087f2ed43ffa79b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1595618892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63656,6 +63686,7 @@ MonoBehaviour:
     \u043F\u043E\u043B\u043E\u043D \u0441\u0442\u0440\u0430\u0445\u0430\u2026\u201D"
   - "\u201C\u0417\u0430\u0447\u0435\u043C \u0442\u044B \u044D\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u043B\u0430,
     \u0428\u0435\u0440\u0438\u043B?\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!61 &3583121716321824891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63843,6 +63874,7 @@ MonoBehaviour:
   - "\u201C\u0414\u0435\u043B\u043E \u0432\u043E\u0432\u0441\u0435 \u043D\u0435 \u0432
     \u0442\u0435\u0431\u0435, \u0435\u0441\u043B\u0438 \u0431\u044B \u044F \u043C\u043E\u0433
     \u043F\u043E\u043C\u043E\u0447\u044C \u0442\u043E\u0433\u0434\u0430\u2026\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!61 &3583121716416504765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64536,6 +64568,7 @@ MonoBehaviour:
   - "\u201C\u041E\u043D\u0430 \u0433\u0440\u0435\u0437\u0438\u043B\u0430 \u043E \u0441\u0432\u043E\u0431\u043E\u0434\u0435\u2026\u201D "
   - "\u201C\u041F\u0440\u0438\u0440\u043E\u0434\u0430 \u043D\u0435 \u0432\u0440\u0451\u0442
     \u0438 \u043D\u0435 \u043E\u0431\u0438\u0436\u0430\u0435\u0442\u2026\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!61 &3583121717121924203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64935,6 +64968,7 @@ MonoBehaviour:
     \u0442\u043E\u0441\u043A\u0443. "
   - "\u201C\u0427\u0442\u043E \u0436\u0435 \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C
     \u0441 \u0417\u0435\u0444\u0438\u0440\u043A\u043E\u0439?\u201D"
+  managenetUI: {fileID: 552159922}
 --- !u!1 &3583121717548725806
 GameObject:
   m_ObjectHideFlags: 0
@@ -65843,26 +65877,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1082325571155801472, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: m_Volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801472, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 94d2f89e94161214e8398cdc95081cf1, type: 3}
-    - target: {fileID: 1082325571155801473, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: speed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801473, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801473, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: playerLHTransform
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1082325571155801473, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
       propertyPath: playerRHTransform
       value: 
@@ -65916,38 +65930,6 @@ PrefabInstance:
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: layers.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[1]
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[2]
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[3]
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[4]
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: coeff.Array.data[5]
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
       propertyPath: layers.Array.data[0]
       value: 
       objectReference: {fileID: 8697444282105290393}
@@ -65971,10 +65953,6 @@ PrefabInstance:
       propertyPath: layers.Array.data[5]
       value: 
       objectReference: {fileID: 1584981254}
-    - target: {fileID: 1082325571155801534, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
-      propertyPath: layers.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2ecc9422063a2c479219c4141aae0e2, type: 3}
 --- !u!222 &8677294312819689155
