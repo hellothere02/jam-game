@@ -11,10 +11,11 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentText;
     [SerializeField] private string[] monolog;
     private int currentIndexText;
+    private bool isAllow;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.F) && isAllow)
         {
             helpPanel.SetActive(false);
             textPanel.SetActive(true);
@@ -25,6 +26,7 @@ public class SecretItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         helpPanel.SetActive(true);
+        isAllow = true;
 
     }
 
@@ -49,5 +51,6 @@ public class SecretItem : MonoBehaviour
     public void ClosePopUp()
     {
         textPanel.SetActive(false);
+        Destroy(gameObject);
     }
 }
