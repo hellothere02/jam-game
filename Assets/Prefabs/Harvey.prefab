@@ -536,7 +536,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4760934890900882344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -643,6 +643,7 @@ MonoBehaviour:
     m_Bits: 64
   _trapAnim: {fileID: 0}
   _sounDeathPlayer: {fileID: 5887837952175014353}
+  _isDeat: 0
 --- !u!1 &4760934891040322932
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,9 +847,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2119469497
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 881397073
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: -144172994, guid: 781eae3260f8be7469fa77ade1a735c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

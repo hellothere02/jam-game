@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartVidio 1.unity
     guid: f5f721d58d6cb8b4188f0ef0997fa2bd
   - enabled: 1
-    path: Assets/Scenes/Game_3.unity
-    guid: c5c89655c4130264c82c4df59e22b358
+    path: Assets/Scenes/_Game_scene.unity
+    guid: 4d5dfff97bd7e9648a9563f8b860d1dd
   - enabled: 1
     path: Assets/Scenes/EndVidio.unity
     guid: 6967d42fe76589b4a8166cad5cab9844
