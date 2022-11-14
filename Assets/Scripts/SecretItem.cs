@@ -13,12 +13,16 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private ManagenetUIGame managenetUI;
     private int currentIndexText;
     private bool isAllow;
+    private int _pickUpMemory;
+
+    public static event OnPickUpMemory PickUpMemory;
+    public delegate void OnPickUpMemory(int memory);
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.F) && isAllow)
         {
-            managenetUI.GetScore();
+            //managenetUI.GetScore();
             helpPanel.SetActive(false);
             textPanel.SetActive(true);
             currentText.text = monolog[currentIndexText];
@@ -52,6 +56,8 @@ public class SecretItem : MonoBehaviour
     public void ClosePopUp()
     {
         textPanel.SetActive(false);
+        _pickUpMemory++;           
+        PickUpMemory(_pickUpMemory);
         Destroy(gameObject);
     }
 }

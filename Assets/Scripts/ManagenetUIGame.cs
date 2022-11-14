@@ -10,11 +10,11 @@ public class ManagenetUIGame : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private AudioSource _audio;
     [SerializeField] private TextMeshProUGUI scoreText;
-    private int score;
+
     private bool _ispocced;
     public static event OnProceed ProceedGame;
     public delegate void OnProceed(bool proceedGame);
-
+    private int _amount;
     private bool _isclick = false;
     public static event OnClick Click;
     public delegate void OnClick(bool click);
@@ -25,10 +25,12 @@ public class ManagenetUIGame : MonoBehaviour
     void OnEnable()
     {
         PlayerDeath.Death += ActivScreenOfDeath;
+        SecretItem.PickUpMemory += GetScore;
     }
     void OnDisable()
     {
         PlayerDeath.Death -= ActivScreenOfDeath;
+        SecretItem.PickUpMemory -= GetScore;
     }
     private void Update()
     {
@@ -72,9 +74,9 @@ public class ManagenetUIGame : MonoBehaviour
         }
     }
 
-    public void GetScore()
+    public void GetScore(int score)
     {
-        score++;
-        scoreText.text = score.ToString();
+        _amount += score;
+        scoreText.text = _amount.ToString();
     }
 }
