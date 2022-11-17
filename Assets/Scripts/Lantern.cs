@@ -10,16 +10,19 @@ public class Lantern : MonoBehaviour
     
     private void Update()
     {
-        Vector3 diference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        if (diference.x < 0)
+        if (ManagenetUIGame.instance.isDeath != true)
         {
-            float rotateZ = Mathf.Atan2(diference.y * number, diference.x * -1) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(rotateZ, minOffset, maxOffset));
-        }
-        else
-        {
-            float rotateZ = Mathf.Atan2(diference.y * number, diference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(rotateZ, minOffset, maxOffset));
+            Vector3 diference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            if (diference.x < 0)
+            {
+                float rotateZ = Mathf.Atan2(diference.y * number, diference.x * -1) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(rotateZ, minOffset, maxOffset));
+            }
+            else
+            {
+                float rotateZ = Mathf.Atan2(diference.y * number, diference.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(rotateZ, minOffset, maxOffset));
+            }
         }
     }
 }

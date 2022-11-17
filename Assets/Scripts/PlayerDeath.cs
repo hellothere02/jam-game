@@ -46,20 +46,26 @@ public class PlayerDeath : MonoBehaviour
     private void Update()
     {
         DeathPlayer();
+        SavePossition();
     }
 
+    private void SavePossition()
+    {
+        if(Input.GetKeyDown(KeyCode.F5))
+            _checkPointposition = _rbPlayer.transform.position;
+    }
     private void DeathPlayer()
     {
-        hit = Physics2D.Raycast(_rbPlayer.transform.position, Vector2.down, _distance, _goal);
+        //hit = Physics2D.Raycast(_rbPlayer.transform.position, Vector2.down, _distance, _goal);
     
-        if (hit.collider != null)
-        {
+        //if (hit.collider != null)
+        //{
 
-            if (hit.collider.CompareTag("Ground"))
-                _checkPointposition = _rbPlayer.transform.position;
-            _isDeat = false;
+        //    if (hit.collider.CompareTag("Ground"))
+        //        _checkPointposition = _rbPlayer.transform.position;
+        //    _isDeat = false;
             
-        } 
+        //} 
 
             if (_rbPlayer.transform.position.y < 0.35)
             {
@@ -95,6 +101,7 @@ public class PlayerDeath : MonoBehaviour
             _isDeat = true;
             Death(_isDeat);       
     }
+
 }
 
     

@@ -151,32 +151,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlipPlayer(float horizontalDirection)
     {
-        if (horizontalDirection.Equals(0) == false)
-        {
-            if (horizontalDirection < 0)
+       
+            if (horizontalDirection.Equals(0) == false)
             {
-                spriteRenderer.flipX = true;
-                headRight.SetActive(false);
-                headleft.SetActive(true);
-                
-                //spriteRendererHead.flipX = true;
-                //spriteRendererLight.flipX = true;
-                //transformHead.localPosition = new Vector3(-0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
-                //currentSwordTransform = new Vector2(swordLeftTransform.position.x, swordLeftTransform.position.y);
-                //angle = 180f;
+                if (horizontalDirection < 0)
+                {
+                    spriteRenderer.flipX = true;
+                    headRight.SetActive(false);
+                    headleft.SetActive(true);
+
+                    //spriteRendererHead.flipX = true;
+                    //spriteRendererLight.flipX = true;
+                    //transformHead.localPosition = new Vector3(-0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
+                    //currentSwordTransform = new Vector2(swordLeftTransform.position.x, swordLeftTransform.position.y);
+                    //angle = 180f;
+                }
+                else
+                {
+                    spriteRenderer.flipX = false;
+                    headleft.SetActive(false);
+                    headRight.SetActive(true);
+                    //spriteRendererHead.flipX = false;
+                    //spriteRendererLight.flipX = false;
+                    //transformHead.localPosition = new Vector3(0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
+                    //currentSwordTransform = new Vector2(swordRightTransform.position.x, swordRightTransform.position.y);
+                    //angle = 0;
+                }
             }
-            else
-            {
-                spriteRenderer.flipX = false;
-                headleft.SetActive(false);
-                headRight.SetActive(true);
-                //spriteRendererHead.flipX = false;
-                //spriteRendererLight.flipX = false;
-                //transformHead.localPosition = new Vector3(0.02f, transformHead.localPosition.y, transformHead.localPosition.z);
-                //currentSwordTransform = new Vector2(swordRightTransform.position.x, swordRightTransform.position.y);
-                //angle = 0;
-            }
-        }
+        
     }
 
     public void EndOfAttack()
