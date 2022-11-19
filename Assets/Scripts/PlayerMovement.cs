@@ -40,7 +40,13 @@ public class PlayerMovement : MonoBehaviour
     public static event OnAlightingd Alightingd;
     public delegate void OnAlightingd(bool alightingd);
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(overlapCircle, circleRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(overlapCircle, circleRadiusIsInAir);
+    }
     private void Awake()
     {
         headRight.SetActive(true);
