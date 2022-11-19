@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Audio;
 
 public class ManagenetUIGame : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ManagenetUIGame : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private AudioSource _audio;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private AudioMixerGroup _audioMixerGame;
 
     static public ManagenetUIGame instance;
     public bool isDeath;
@@ -40,7 +42,7 @@ public class ManagenetUIGame : MonoBehaviour
     private void Update()
     {
         Menu();
-        _audio.volume = _slider.value;
+        //_audio.volume = _slider.value;
     }
     private void ActivScreenOfDeath(bool activ)
     {
@@ -92,5 +94,11 @@ public class ManagenetUIGame : MonoBehaviour
     {
         _amount += score;
         scoreText.text = _amount.ToString();
+    }
+
+    public void SoundVolune()
+    {
+         //float volume = _slider.value;
+        _audioMixerGame.audioMixer.SetFloat("MasterGameParam", Mathf.Lerp(-80, 0, _slider.value));
     }
 }

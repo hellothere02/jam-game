@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SecretItem : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentText;
     [SerializeField] private string[] monolog;
     [SerializeField] private ManagenetUIGame managenetUI;
+    [SerializeField] private AudioMixerGroup _audioMixerGame;
+    private AudioSource _audioMixerPossitiv;
+    [SerializeField] private Slider _slider;
+    //private AudioMixerGroup _audioMixerNegativ;
     private int currentIndexText;
     private bool isAllow;
     private int _pickUpMemory;
@@ -18,14 +23,26 @@ public class SecretItem : MonoBehaviour
     public static event OnPickUpMemory PickUpMemory;
     public delegate void OnPickUpMemory(int memory);
 
+    private void Awake()
+    {
+       // _audioMixerShere.audioMixer.SetFloat("MasterMemorydParam", -80);
+       ///_audioMixerNegativ = GetComponent<AudioMixerGroup>();
+       _audioMixerPossitiv = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.F) && isAllow)
         {
             //managenetUI.GetScore();
+            _audioMixerGame.audioMixer.SetFloat("MasterGameParam", -80);
+            _audioMixerPossitiv.Play();
+            _audioMixerPossitiv.volume = _slider.value;
             helpPanel.SetActive(false);
             textPanel.SetActive(true);
             currentText.text = monolog[currentIndexText];
+            //_audioMixerGame.audioMixer.SetFloat("MasterGameParam", -80);
+            //_audioMixerPossitiv.volume = 1;
+         
         }
     }
 
@@ -59,5 +76,7 @@ public class SecretItem : MonoBehaviour
         _pickUpMemory++;           
         PickUpMemory(_pickUpMemory);
         Destroy(gameObject);
+        _audioMixerGame.audioMixer.SetFloat("MasterGameParam", 0);
+        _audioMixerPossitiv.Stop();
     }
 }

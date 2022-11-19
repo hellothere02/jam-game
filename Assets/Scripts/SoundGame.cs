@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class SoundGame : MonoBehaviour
 {
     [SerializeField] private AudioSource _soundClickOnButton;
@@ -10,13 +10,20 @@ public class SoundGame : MonoBehaviour
     [SerializeField] private AudioSource _sounJumpPlayer;
     [SerializeField] private AudioSource _sounAlightingdPlayer;
     [SerializeField] private AudioSource _sounPlantWorld;
- 
+    [SerializeField] private AudioSource _sounDogtWorld;
+    //[SerializeField] private AudioMixerGroup _audioMixerPossitiv;
+    //[SerializeField] private AudioMixerGroup _audioMixerNegativ;
 
+    private void Start()
+    {
+        //_audioMixerPossitiv.audioMixer.SetFloat("MasterMemorydParam", -80);
+        //_audioMixerNegativ.audioMixer.SetFloat("MasterMemorydParam", -80);
+    }
     void OnEnable()
     {
         ManagementMainMenu.Click += SoundCliclPlay;
         ManagenetUIGame.Click += SoundCliclPlay;
-        //PlayerDeath.SoundDeath+= SoundDeathPlay;
+        TrapDog.DeathDog += SoundDogtWorld;
         PlayerMovement.Step += SoundStepPlay;
         PlayerMovement.JumpSound += SoundJumpPlayer;
         PlayerMovement.Alightingd += SoundAlightingdPlayer;
@@ -27,7 +34,7 @@ public class SoundGame : MonoBehaviour
     {
         ManagementMainMenu.Click -= SoundCliclPlay;
         ManagenetUIGame.Click -= SoundCliclPlay;
-        //PlayerDeath.SoundDeath -= SoundDeathPlay;
+        TrapDog.DeathDog -= SoundDogtWorld;
         PlayerMovement.Step -= SoundStepPlay;
         PlayerMovement.JumpSound -= SoundJumpPlayer;
         PlayerMovement.Alightingd -= SoundAlightingdPlayer;
@@ -77,6 +84,13 @@ public class SoundGame : MonoBehaviour
             _sounPlantWorld.Play();
         }
     }
+    private void SoundDogtWorld(bool activ)
+    {
+        if (activ)
+        {
+            _sounDogtWorld.Play();
+        }
+    }
 
-   
+
 }
