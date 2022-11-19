@@ -42,6 +42,7 @@ public class PlayerDeath : MonoBehaviour
     {
         _rbPlayer = GetComponent<Rigidbody2D>();
         _trapAnim = GetComponent<Animator>();
+        _checkPointposition = transform.position;
     }
     private void Update()
     {
