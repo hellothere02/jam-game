@@ -384,13 +384,13 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5943fd5b22dc1e1458fd09ed0edae661, type: 3}
   m_MaskAlphaCutoff: 0.025
-  m_FrontSortingLayerID: 0
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
+  m_FrontSortingLayerID: 881397073
+  m_BackSortingLayerID: -1004235673
+  m_FrontSortingLayer: 4
+  m_BackSortingLayer: 3
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
 --- !u!1 &4760934890900882344
 GameObject:
@@ -527,7 +527,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4760934890900882348
 BoxCollider2D:
@@ -579,14 +579,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17eb50f8c5045a4290cfd76636f3ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHight: 2.8
+  jumpHight: 3.3
   movementInAir: 0.8
-  groundCollider: {fileID: 4760934891040322933}
+  groundCollider: {fileID: 4760934892130955604}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  circleRadius: 0.25
-  circleRadiusIsInAir: 0.2
+  circleRadius: 0.06
+  circleRadiusIsInAir: 0.15
   movementCurve:
     serializedVersion: 2
     m_Curve:
@@ -685,7 +685,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 4760934891040322932}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 47c36ffcbf50f474fbb12149589fbf54, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -847,8 +847,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 881397073
-  m_SortingLayer: 4
+  m_SortingLayerID: -2119469497
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -144172994, guid: 781eae3260f8be7469fa77ade1a735c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1375,13 +1375,13 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5943fd5b22dc1e1458fd09ed0edae661, type: 3}
   m_MaskAlphaCutoff: 0.01
-  m_FrontSortingLayerID: 0
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
+  m_FrontSortingLayerID: 881397073
+  m_BackSortingLayerID: -1004235673
+  m_FrontSortingLayer: 4
+  m_BackSortingLayer: 3
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
 --- !u!1 &4760934892657022475
 GameObject:
@@ -1455,8 +1455,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 881397073
-  m_SortingLayer: 4
+  m_SortingLayerID: -2119469497
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 237146085, guid: edcc107a836988248ba4e6b2d5837ccf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1688,7 +1688,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024206877, y: 0.2263698}
+  m_Offset: {x: 0.024206877, y: 0.2556277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1699,7 +1699,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.098139286, y: 0.14187741}
+  m_Size: {x: 0.098139286, y: 0.2003932}
   m_EdgeRadius: 0
 --- !u!1 &5944167625767781775
 GameObject:
